@@ -17,7 +17,7 @@
 ### 1. Подготовка репозитория
 1.  Клонируйте репозиторий:
     ```bash
-    git clone <ваша-ссылка-на-github>
+    git clone https://github.com/RambaLamba/TelegramBot_chatgpt.git
     cd <папка-проекта>
     ```
 2.  Установите зависимости:
@@ -73,4 +73,5 @@ TelegramBot_chatgpt/
 ├── .env # Файл с ключами(заполнить перед запуском)
 ├── .env.example # Шаблон для .env (в репозитории)
 ├── requirements.txt # Зависимости Python
+
 └── README.md # Эта инструкция
