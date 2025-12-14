@@ -16,7 +16,6 @@ if not TELEGRAM_TOKEN:
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
 bot = TeleBot(TELEGRAM_TOKEN)
 client = OpenAI(api_key=OPENAI_API_KEY)
 
@@ -30,7 +29,6 @@ def send_welcome(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
     new_request_btn = types.KeyboardButton('🆕 Новый запрос')
-
     markup.add(new_request_btn)
 
     bot.send_message(
@@ -80,7 +78,5 @@ def handle_message(message):
 
     except Exception as e:
         bot.reply_to(message, f'Произошла ошибка: {e}')
-
-
 
 bot.polling()
